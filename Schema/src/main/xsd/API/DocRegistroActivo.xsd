@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Versión 1.0 2019-01-11 Carlos David Ruiz Garcia Version Inicial -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://API.co/DocRegistroActivo"
+	targetNamespace="http://API.co/DocRegistroActivo"
+    elementFormDefault="unqualified">
+
+
+	<!-- Elemento Raíz de Documento de Registro de Nuevo Activo Fijo-->
+	<xs:element name="DocumentoRegistro"  		type="DocumentoRegistroType"></xs:element>
+
+
+
+	<xs:complexType name="DocumentoRegistroType">
+
+		<xs:sequence>
+
+			<xs:element name="nombre" 						type="xs:string"               	minOccurs="1" maxOccurs="1"></xs:element>
+			
+			<xs:element name="descripcion" 					type="xs:string"           		minOccurs="1" maxOccurs="1"></xs:element>
+			
+			<xs:element name="tipo" 					    type="xs:string"     	  		minOccurs="1" maxOccurs="1"></xs:element>
+			
+			<xs:element name="serial" 					    type="xs:string"     	  		minOccurs="1" maxOccurs="1"></xs:element>
+
+            <xs:element name="numInventario" 				type="xs:integer"              	minOccurs="1" maxOccurs="1"></xs:element>
+			
+			<xs:element name="peso" 						type="xs:decimal"          		minOccurs="1" maxOccurs="1"></xs:element>
+			
+			<xs:element name="alto" 					    type="xs:decimal"    	  		minOccurs="1" maxOccurs="1"></xs:element>
+			
+			<xs:element name="ancho" 					    type="xs:decimal"    	  		minOccurs="1" maxOccurs="1"></xs:element>
+
+            <xs:element name="largo" 						type="xs:decimal"              	minOccurs="1" maxOccurs="1"></xs:element>
+			
+			<xs:element name="valCompra" 					type="xs:decimal"          		minOccurs="1" maxOccurs="1"></xs:element>
+			
+			<xs:element name="fechaCompra" 					type="xs:date" 	  	        	minOccurs="1" maxOccurs="1"></xs:element>
+			
+			<xs:element name="fechaBaja" 					type="xs:date"       	  		minOccurs="1" maxOccurs="1"></xs:element>
+
+            <xs:element name="estadoActual" 				type="xs:string"               	minOccurs="1" maxOccurs="1"></xs:element>
+			
+			<xs:element name="color" 						type="xs:string"           		minOccurs="1" maxOccurs="1"></xs:element>
+		</xs:sequence>
+
+	</xs:complexType>
+
+</xs:schema>

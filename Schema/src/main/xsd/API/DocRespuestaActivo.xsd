@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Versión 1.0 2019-01-11 Carlos David Ruiz Garcia Version Inicial -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns="http://API.co/DocRespuestaActivo"
+	targetNamespace="http://API.co/DocRespuestaActivo"
+    elementFormDefault="unqualified">
+
+
+
+	<!-- ................................................................................. -->
+	<!-- ..... Respuesta de nuevoActivo una vez se procesa la petición "/nuevoActivo" -->
+	<!-- ................................................................................. -->
+	
+	<!-- Estructura principal -->
+	<xs:element name="RespuestaNuevoActivo"  		type="RespuestaNuevoActivoType"></xs:element> 
+	
+	
+	<!-- Detalle de la estructura principal -->
+	<xs:complexType name="RespuestaNuevoActivoType">
+
+		<xs:sequence>
+			<xs:element name="codigoPeticion" 					type="xs:integer"   	minOccurs="1" maxOccurs="1"></xs:element>
+
+			<xs:element name="descripcionPeticion" 			    type="xs:integer"   	minOccurs="1" maxOccurs="1"></xs:element>
+		</xs:sequence>
+		
+	</xs:complexType>
+	
+	<!-- ................................................................................. -->
+	<!-- ................................................................................. -->
+	
+
+	<!-- ................................................................................. -->
+	<!-- ..... Respuesta de Actualizar Activo una vez se procesa la petición "/actualizarActivo" -->
+	<!-- ................................................................................. -->
+
+	<!-- Estructura principal -->
+	<xs:element name="RespActualizarActivo"  		type="RespActualizarActivoType"></xs:element> 
+	
+	<!-- Detalle de la estructura principal -->
+	<xs:complexType name="RespActualizarActivoType">
+
+		<xs:sequence>
+			<xs:element name="codigoPeticion" 					type="xs:integer"   	minOccurs="1" maxOccurs="1"></xs:element>
+
+			<xs:element name="descripcionPeticion" 			    type="xs:integer"   	minOccurs="1" maxOccurs="1"></xs:element>
+		</xs:sequence>
+
+	</xs:complexType>
+	<!-- ................................................................................. -->
+	<!-- ................................................................................. -->
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- ................................................................................. -->
+	<!-- ..... Respuesta de Buscar Clasificado Activos una vez se procesa la petición "/BuscarClasiActivos" -->
+	<!-- ................................................................................. -->
+	
+	<!-- Estructura principal -->
+	<xs:element name="RespBuscarClasiActivos"  		type="RespBuscarClasiActivosType"></xs:element> 
+	
+	
+	<!-- Detalle de la estructura principal -->
+	<xs:complexType name="RespBuscarClasiActivosType">
+
+		<xs:sequence>
+			
+			<xs:element name="codigoPeticion" 					type="xs:integer"   	    minOccurs="1" maxOccurs="1"></xs:element>
+
+			<xs:element name="descripcionPeticion" 			    type="xs:integer"   	    minOccurs="1" maxOccurs="1"></xs:element>
+			
+			<xs:element name="activosFijos"		 	    	    type="activosFijosType"   	minOccurs="0" maxOccurs="unbounded">		</xs:element>
+		</xs:sequence>
+
+	</xs:complexType>
+	<!-- ................................................................................. -->
+	<!-- ................................................................................. -->
+	
+	
+	<!-- ................................................................................. -->
+	<!-- ..... Respuesta de Buscar Todos Activos una vez se procesa la petición "/BuscarTodosActivos" -->
+	<!-- ................................................................................. -->
+	
+	<!-- Estructura principal -->
+	<xs:element name="RespBuscarTodosActivos"  		type="RespBuscarTodosActivosType"></xs:element> 
+	
+	
+	<!-- Detalle de la estructura principal -->
+	<xs:complexType name="RespBuscarTodosActivosType">
+
+		<xs:sequence>
+			
+			<xs:element name="codigoPeticion" 					type="xs:integer"   	    minOccurs="1" maxOccurs="1"></xs:element>
+
+			<xs:element name="descripcionPeticion" 			    type="xs:integer"   	    minOccurs="1" maxOccurs="1"></xs:element>
+			
+			<xs:element name="activosFijos"		 	    	    type="activosFijosType"   	minOccurs="0" maxOccurs="unbounded">		</xs:element>
+		</xs:sequence>
+
+	</xs:complexType>
+	
+	
+	<!-- Detalle de estados del documento consultado -->
+	<xs:complexType name="activosFijosType">
+
+		<xs:sequence>
+			
+			<xs:element name="nombre" 						type="xs:string"               	minOccurs="1" maxOccurs="1"></xs:element>
+			
+			<xs:element name="descripcion" 					type="xs:string"           		minOccurs="1" maxOccurs="1"></xs:element>
+			
+			<xs:element name="tipo" 					    type="xs:string"     	  		minOccurs="1" maxOccurs="1"></xs:element>
+			
+			<xs:element name="serial" 					    type="xs:string"     	  		minOccurs="1" maxOccurs="1"></xs:element>
+
+            <xs:element name="numInventario" 				type="xs:integer"              	minOccurs="1" maxOccurs="1"></xs:element>
+			
+			<xs:element name="peso" 						type="xs:decimal"          		minOccurs="1" maxOccurs="1"></xs:element>
+			
+			<xs:element name="alto" 					    type="xs:decimal"    	  		minOccurs="1" maxOccurs="1"></xs:element>
+			
+			<xs:element name="ancho" 					    type="xs:decimal"    	  		minOccurs="1" maxOccurs="1"></xs:element>
+
+            <xs:element name="largo" 						type="xs:decimal"              	minOccurs="1" maxOccurs="1"></xs:element>
+			
+			<xs:element name="valCompra" 					type="xs:decimal"          		minOccurs="1" maxOccurs="1"></xs:element>
+			
+			<xs:element name="fechaCompra" 					type="xs:date" 	  	        	minOccurs="1" maxOccurs="1"></xs:element>
+			
+			<xs:element name="fechaBaja" 					type="xs:date"       	  		minOccurs="1" maxOccurs="1"></xs:element>
+
+            <xs:element name="estadoActual" 				type="xs:string"               	minOccurs="1" maxOccurs="1"></xs:element>
+			
+			<xs:element name="color" 						type="xs:string"           		minOccurs="1" maxOccurs="1"></xs:element>
+            
+		</xs:sequence>
+
+	</xs:complexType>
+	<!-- ................................................................................. -->
+	<!-- ................................................................................. -->
+	
+	
+	
+	
+	<!-- ................................................................................. -->
+	<!-- Respuesta de Listar Datos (Áreas y Personas) una vez se consume el servicio /listarDatos -->
+	<!-- ................................................................................. -->
+	<!-- Estructura principal -->
+	<xs:element name="RespuestaListarDatos"  		type="RespuestaListarDatosType"></xs:element> 
+	
+	
+	<xs:complexType name="RespuestaListarDatosType">
+
+		<xs:sequence>
+			
+			<xs:element name="codigoPeticion" 					type="xs:integer"   	    minOccurs="1" maxOccurs="1"></xs:element>
+
+			<xs:element name="descripcionPeticion" 			    type="xs:integer"   	    minOccurs="1" maxOccurs="1"></xs:element>
+			
+			<xs:element name="areas"		 	    	        type="areasType"   	        minOccurs="0" maxOccurs="unbounded">		</xs:element>
+
+            <xs:element name="personas"		 	    	        type="personasType"   	    minOccurs="0" maxOccurs="unbounded">		</xs:element>
+			
+		</xs:sequence>
+
+	</xs:complexType>
+	
+	
+	<!-- Detalle de la estructura principal -->
+	<xs:complexType name="areasType">
+
+		<xs:sequence>
+			
+			<xs:element name="idArea"		 	    type="xs:string"   		minOccurs="1" maxOccurs="1">				</xs:element>
+			
+			<xs:element name="nombreArea"		 	type="xs:string"   	    minOccurs="1" maxOccurs="1">				</xs:element>
+
+            <xs:element name="ciudadArea"		 	type="ciudadesType"   	minOccurs="1" maxOccurs="1">				</xs:element>
+			
+		</xs:sequence>
+
+	</xs:complexType>
+
+
+    <!-- Detalle de la estructura principal -->
+	<xs:complexType name="personasType">
+
+		<xs:sequence>
+			
+			<xs:element name="idPersona"		 	            type="xs:string"   			minOccurs="1" maxOccurs="1">				</xs:element>
+
+            <xs:element name="fechaNaciPersona"		 		    type="xs:date"   	        minOccurs="1" maxOccurs="1">				</xs:element>
+
+			<xs:element name="nombrePersona"		 		    type="xs:string"   	        minOccurs="1" maxOccurs="1">				</xs:element>
+
+            <xs:element name="apellidoPersona"		 		    type="xs:string"   	        minOccurs="1" maxOccurs="1">				</xs:element>
+
+            <xs:element name="direccionPersona"		 		    type="xs:string"   	        minOccurs="1" maxOccurs="1">				</xs:element>
+
+            <xs:element name="ciudadPersona"		 		    type="ciudadesType"   	    minOccurs="1" maxOccurs="1">				</xs:element>
+			
+		</xs:sequence>
+
+	</xs:complexType>
+
+
+    <!-- Detalle de la estructura principal -->
+	<xs:complexType name="ciudadesType">
+
+		<xs:sequence>
+			
+			<xs:element name="idCiudad"		 	            type="xs:string"   			minOccurs="1" maxOccurs="1">				</xs:element>
+
+            <xs:element name="nombreCiudad"		 		    type="xs:string"   	        minOccurs="1" maxOccurs="1">				</xs:element>
+
+			<xs:element name="nombreDepartamento"		 	type="xs:string"   	        minOccurs="1" maxOccurs="1">				</xs:element>
+
+            <xs:element name="nombrePais"		 		    type="xs:string"   	        minOccurs="1" maxOccurs="1">				</xs:element>
+			
+		</xs:sequence>
+
+	</xs:complexType>
+
+	<!-- ................................................................................. -->
+	<!-- ................................................................................. -->
+	
+	
+	<!-- ................................................................................. -->
+	<!-- ..... Respuesta de Modificar Activo una vez se procesa la petición "/modificar" -->
+	<!-- ................................................................................. -->
+
+	<!-- Estructura principal -->
+	<xs:element name="RespuestaModificar"  		type="RespuestaModificarType"></xs:element> 
+	
+	<!-- Detalle de la estructura principal -->
+	<xs:complexType name="RespuestaModificarType">
+
+		<xs:sequence>
+			<xs:element name="codigoPeticion" 					type="xs:integer"   	minOccurs="1" maxOccurs="1"></xs:element>
+
+			<xs:element name="descripcionPeticion" 			    type="xs:integer"   	minOccurs="1" maxOccurs="1"></xs:element>
+		</xs:sequence>
+
+	</xs:complexType>
+	<!-- ................................................................................. -->
+	<!-- ................................................................................. -->
+</xs:schema>
