@@ -122,15 +122,15 @@
 
             <xs:element name="numInventario" 				type="xs:integer"              	minOccurs="1" maxOccurs="1"></xs:element>
 			
-			<xs:element name="peso" 						type="xs:decimal"          		minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="peso" 						minOccurs="1" maxOccurs="1"><xs:simpleType><xs:restriction base='xs:decimal'><xs:fractionDigits value='2'/></xs:restriction></xs:simpleType></xs:element>
 			
-			<xs:element name="alto" 					    type="xs:decimal"    	  		minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="alto" 					    minOccurs="1" maxOccurs="1"><xs:simpleType><xs:restriction base='xs:decimal'><xs:fractionDigits value='2'/></xs:restriction></xs:simpleType></xs:element>
 			
-			<xs:element name="ancho" 					    type="xs:decimal"    	  		minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="ancho" 					    minOccurs="1" maxOccurs="1"><xs:simpleType><xs:restriction base='xs:decimal'><xs:fractionDigits value='2'/></xs:restriction></xs:simpleType></xs:element>
 
-            <xs:element name="largo" 						type="xs:decimal"              	minOccurs="1" maxOccurs="1"></xs:element>
+            <xs:element name="largo" 						minOccurs="1" maxOccurs="1"><xs:simpleType><xs:restriction base='xs:decimal'><xs:fractionDigits value='2'/></xs:restriction></xs:simpleType></xs:element>
 			
-			<xs:element name="valCompra" 					type="xs:decimal"          		minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element name="valCompra" 					minOccurs="1" maxOccurs="1"><xs:simpleType><xs:restriction base='xs:decimal'><xs:fractionDigits value='2'/></xs:restriction></xs:simpleType></xs:element>
 			
 			<xs:element name="fechaCompra" 					type="xs:date" 	  	        	minOccurs="1" maxOccurs="1"></xs:element>
 			
@@ -205,6 +205,8 @@
             <xs:element name="direccionPersona"		 		    type="xs:string"   	        minOccurs="1" maxOccurs="1">				</xs:element>
 
             <xs:element name="ciudadPersona"		 		    type="ciudadesType"   	    minOccurs="1" maxOccurs="1">				</xs:element>
+
+            <xs:element name="areaPersona"  		 		    type="xs:string"       	    minOccurs="1" maxOccurs="1">				</xs:element>
 			
 		</xs:sequence>
 

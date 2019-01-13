@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Versión 1.0 2019-01-11 Carlos David Ruiz Garcia Version Inicial -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns="http://API.co/DocRespuestaActivo"
+	targetNamespace="http://API.co/DocRespuestaActivo"
+    elementFormDefault="unqualified">
+
+    <!-- Elemento Raíz de Documento de Registro de Nuevo Activo Fijo-->
+	<xs:element name="DocumentoBuscarClasificado"  		type="DocumentoBuscarClasificadoType"></xs:element>
+
+	<xs:complexType name="DocumentoBuscarClasificadoType">
+
+		<xs:sequence>
+
+			<xs:element name="tipoActivo" 						    type="xs:string"               	minOccurs="0" maxOccurs="1"></xs:element>
+			
+			<xs:element name="fechaCompra"   					    type="xs:date"           		minOccurs="0" maxOccurs="1"></xs:element>
+
+            <xs:element name="serial" 		        			    type="xs:string"           		minOccurs="0" maxOccurs="1"></xs:element>
+
+		</xs:sequence>
+
+	</xs:complexType>
+
+</xs:schema>

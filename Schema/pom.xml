@@ -52,7 +52,7 @@
 							<clearOutputDir>true</clearOutputDir>
 						</configuration>
 					</execution>
-					
+
 					<execution>
 						<id>DocRespuestaActivo</id>
 						<goals>
@@ -64,6 +64,33 @@
 							<staleFile>${project.build.directory}/jaxb2/.DocRespuestaActivo</staleFile>
 							<clearOutputDir>false</clearOutputDir>
 						</configuration>
+					</execution>
+					
+					<execution>
+						<id>DocBuscarClasiActivos</id>
+						<goals>
+							<goal>xjc</goal>
+						</goals>
+						<configuration>
+							<schemaFiles>API/DocBuscarClasiActivos.xsd</schemaFiles>
+							<outputDirectory>${project.basedir}/src/main/java</outputDirectory>
+							<staleFile>${project.build.directory}/jaxb2/.DocBuscarClasiActivos</staleFile>
+							<clearOutputDir>false</clearOutputDir>
+						</configuration>
+					</execution>
+
+					<execution>
+						<id>DocModificarActivo</id>
+						<goals>
+							<goal>xjc</goal>
+						</goals>
+						<configuration>
+							<schemaFiles>API/DocModificarActivo.xsd</schemaFiles>
+							<outputDirectory>${project.basedir}/src/main/java</outputDirectory>
+							<staleFile>${project.build.directory}/jaxb2/.DocModificarActivo</staleFile>
+							<clearOutputDir>false</clearOutputDir>
+						</configuration>
+						
 					</execution>
 				</executions>
 			</plugin>
