@@ -8,6 +8,9 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MediaType;
 
+import co.API.CambiosActivos.ProcActualizarActivo;
+import co.API.Respuestas.RespGralPeticion;
+
 /**
  * 
  * Clase encargada de recibir la petición de actualizar datos de activo fijo.
@@ -23,9 +26,17 @@ public class ActualizarActivo {
 	@PUT
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public String actualizarDatos(@Context HttpHeaders headers) {
-		String strRespuesta = null;
-		
-		return strRespuesta;
+	public String actualizarDatos(String strJson) throws Exception {
+		try {
+			String strRespuesta = null;
+			
+			RespGralPeticion RespuestaGral=new RespGralPeticion();
+			
+			ProcActualizarActivo procesarNuevo = new ProcActualizarActivo(strJson, RespuestaGral);
+			
+			return strRespuesta;
+		}catch(Exception ex) {
+			throw(ex);
+		}
 	}
 }

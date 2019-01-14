@@ -31,7 +31,7 @@ public class ActivosFijos {
 	
 	@Basic(optional = true)
 	@Column(name="NII_ACTI")
-	private String strNumeroInventario;
+	private Integer intNumeroInventario;
 	
 	@Basic(optional = true)
 	@Column(name="PES_ACTI")
@@ -101,12 +101,12 @@ public class ActivosFijos {
 		this.strSerial = strSerial;
 	}
 
-	public String getStrNumeroInventario() {
-		return strNumeroInventario;
+	public Integer getIntNumeroInventario() {
+		return intNumeroInventario;
 	}
 
-	public void setStrNumeroInventario(String strNumeroInventario) {
-		this.strNumeroInventario = strNumeroInventario;
+	public void setIntNumeroInventario(Integer intNumeroInventario) {
+		this.intNumeroInventario = intNumeroInventario;
 	}
 
 	public double getDlePeso() {
@@ -180,5 +180,4 @@ public class ActivosFijos {
 	public void setStrColor(String strColor) {
 		this.strColor = strColor;
 	}
-	
 }
